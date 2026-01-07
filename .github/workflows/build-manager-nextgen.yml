@@ -1,4 +1,4 @@
-name: Build Manager
+name: Собрать Менеджер
 
 on:
   workflow_dispatch:
