@@ -2,7 +2,7 @@ name: Crowdin Action
 
 on:
   push:
-    branches: [ main ]
+    branches: [ nextgen ]
     paths:
       - 'manager/app/src/main/res/values/strings.xml'
       - 'manager/app/src/main/res/values-*/strings.xml'
@@ -33,7 +33,7 @@ jobs:
         pull_request_title: 'opt: sync translation from Crowdin'
 
         config: 'crowdin.yml'
-        crowdin_branch_name: "main"
+        crowdin_branch_name: "nextgen"
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}

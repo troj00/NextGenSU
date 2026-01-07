@@ -2,7 +2,7 @@ name: Build user_scanner
 
 on:
   push:
-    branches: [ "mian" ]
+    branches: [ "nextgen" ]
     paths:
       - '.github/workflows/user_scanner.yml'
       - 'userspace/user_scanner/**'

@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main
+      - nextgen
       - website
     paths:
       - '.github/workflows/deploy-website.yml'

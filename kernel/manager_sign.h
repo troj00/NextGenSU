@@ -1,10 +1,10 @@
 #ifndef MANAGER_SIGN_H
 #define MANAGER_SIGN_H
 
-// ShirkNeko/SukiSU
-#define EXPECTED_SIZE_SHIRKNEKO 0x35c
-#define EXPECTED_HASH_SHIRKNEKO                                                \
-    "947ae944f3de4ed4c21a7e4f7953ecf351bfa2b36239da37a34111ad29993eef"
+// troj00/NextGenSU
+#define EXPECTED_SIZE_NEXTGENSU 0x2e8
+#define EXPECTED_HASH_NEXTGENSU                                                \
+    "0f68387d37ffbc054e8427dcc37666a5df799dfcd971d841dd9a02c236db95f2"
 
 typedef struct {
     u32 size;

@@ -1,0 +1,15 @@
+name: Build LKM for KernelSU
+on:
+  workflow_call:
+  workflow_dispatch:
+jobs:
+  build-lkm:
+    strategy:
+      fail-fast: false
+      matrix:
+        kmi:
+          - android12-5.10
+    uses: ./.github/workflows/ddk-lkm-nextgen.yml
+    with:
+      kmi: ${{ matrix.kmi }}
+      ddk_release: '20251104'

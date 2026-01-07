@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">SukiSU Ultra</string>
+    <string name="app_name" translatable="false">NextGenSU</string>
     <string name="home">Home</string>
     <string name="learn_more">Learn more</string>
     <string name="home_not_installed">Not installed</string>
@@ -8,7 +8,7 @@
     <string name="home_working">Working</string>
     <string name="home_working_version">Version: %s</string>
     <string name="home_unsupported">Unsupported</string>
-    <string name="home_unsupported_reason">No KernelSU driver detected on your kernel, wrong kernel?</string>
+    <string name="home_unsupported_reason">No NextGenSU driver detected on your kernel, wrong kernel?</string>
     <string name="home_kernel">Kernel version</string>
     <string name="home_susfs_version">SuSFS Version</string>
     <string name="home_manager_version">Manager version</string>
@@ -64,10 +64,10 @@
     <string name="profile_selinux_context">SELinux context</string>
     <string name="profile_umount_modules">Umount modules</string>
     <string name="failed_to_update_app_profile">Failed to update App Profile for %s</string>
-    <string name="require_kernel_version" formatted="false">The current KernelSU version %s is too low for the manager to work properly. Please upgrade to version %s or higher!</string>
+    <string name="require_kernel_version" formatted="false">The current NextGenSU version %s is too low for the manager to work properly. Please upgrade to version %s or higher!</string>
     <string name="settings_umount_modules_default">Umount modules by default</string>
     <string name="settings_umount_modules_default_summary">The global default value for \"Umount modules\" in App Profile. If enabled, it will remove all module modifications to the system for apps that don\'t have a profile set</string>
-    <string name="profile_umount_modules_summary">Enabling this option will allow KernelSU to restore any modified files by the modules for this app</string>
+    <string name="profile_umount_modules_summary">Enabling this option will allow NextGenSU to restore any modified files by the modules for this app</string>
     <string name="profile_selinux_domain">Domain</string>
     <string name="profile_selinux_rules">Rules</string>
     <string name="module_update">Update</string>
@@ -122,9 +122,9 @@
     <string name="settings_uninstall_temporary">Uninstall temporarily</string>
     <string name="settings_uninstall_permanent">Uninstall permanently</string>
     <string name="settings_restore_stock_image">Restore stock image</string>
-    <string name="settings_uninstall_temporary_message">Temporarily uninstall KernelSU, restore to original state after next reboot</string>
-    <string name="settings_uninstall_permanent_message">Uninstalling KernelSU (root and all modules) completely and permanently</string>
-    <string name="settings_restore_stock_image_message">Restore the stock factory image (if a backup exists), usually used before OTA; if you need to uninstall KernelSU, please use \"Uninstall permanently\"</string>
+    <string name="settings_uninstall_temporary_message">Temporarily uninstall NextGenSU, restore to original state after next reboot</string>
+    <string name="settings_uninstall_permanent_message">Uninstalling NextGenSU (root and all modules) completely and permanently</string>
+    <string name="settings_restore_stock_image_message">Restore the stock factory image (if a backup exists), usually used before OTA; if you need to uninstall NextGenSU, please use \"Uninstall permanently\"</string>
     <string name="flashing">Flashing</string>
     <string name="flash_success">Flash success</string>
     <string name="flash_failed">Flash failed</string>
@@ -169,7 +169,7 @@
     <string name="settings_disable_su">Disable su compatibility</string>
     <string name="settings_disable_su_summary">Disable the ability of any app to gain root privileges via the ⁠su command (existing root processes won\'t be affected)</string>
     <string name="settings_disable_kernel_umount">Disable kernel umount</string>
-    <string name="settings_disable_kernel_umount_summary">Disable kernel-level umount behavior controlled by KernelSU</string>
+    <string name="settings_disable_kernel_umount_summary">Disable kernel-level umount behavior controlled by NextGenSU</string>
     <string name="feature_status_unsupported_summary">Kernel does not support this feature</string>
     <string name="feature_status_managed_summary">This feature is managed by a module</string>
     <string name="settings_mode_default">Default</string>
@@ -233,11 +233,11 @@
     <string name="kpm_control">Execute</string>
     <string name="home_kpm_version">KPM Version</string>
     <string name="close_notice">Close</string>
-    <string name="kernel_module_notice">The following kernel module functions were developed by KernelPatch and modified to include the kernel module functions of SukiSU Ultra</string>
-    <string name="home_ContributionCard_kernelsu">SukiSU Ultra Look forward to</string>
+    <string name="kernel_module_notice">The following kernel module functions were developed by KernelPatch and modified to include the kernel module functions of NextGenSU</string>
+    <string name="home_ContributionCard_kernelsu">NextGenSU Look forward to</string>
     <string name="kpm_control_success">Success</string>
     <string name="kpm_control_failed">Failed</string>
-    <string name="home_click_to_ContributionCard_kernelsu">SukiSU Ultra will be a relatively independent branch of KSU in the future, but we still appreciate the official KernelSU and MKSU etc. for their contributions!</string>
+    <string name="home_click_to_ContributionCard_kernelsu">NextGenSU will be a relatively independent branch of KSU in the future, but we still appreciate the official KernelSU and MKSU etc. for their contributions!</string>
     <string name="not_supported">Unsupported</string>
     <string name="supported">Supported</string>
     <string name="kernel_patched">Kernel not patched</string>
@@ -495,7 +495,7 @@
     <string name="susfs_hide_mounts_setting_all">Hide for all processes</string>
     <string name="susfs_hide_mounts_setting_non_ksu">Hide only for non-KSU processes</string>
     <string name="kernel_simple_kernel">Kernel Version Concise Mode</string>
-    <string name="kernel_simple_kernel_summary">Enable or disable the clean mode displayed by the SukiSU kernel version</string>
+    <string name="kernel_simple_kernel_summary">Enable or disable the clean mode displayed by the NextGenSU kernel version</string>
     <string name="susfs_android_data_path_set">Android Data path has been set to: %s</string>
     <string name="susfs_sdcard_path_set">SD card path has been set to: %s</string>
     <string name="susfs_path_setup_warning">Path setup may not be fully successful, but SUS paths will continue to be added</string>
@@ -561,7 +561,7 @@
     <string name="unknown_signature">Unknown</string>
     <string name="multi_manager_list">Active Manager</string>
     <string name="no_active_manager">No active manager</string>
-    <string name="default_signature">SukiSU</string>
+    <string name="default_signature">NextGenSU</string>
     <string name="home_zygisk_implement">Zygisk implement</string>
     <string name="home_meta_module_implement">Meta Module implement</string>
     <!-- 循环路径相关 -->
@@ -685,7 +685,7 @@ Important Note:\n
     <string name="log_viewer_search_placeholder">Search by UID, command, or details…</string>
     <string name="log_viewer_clear_search">Clear search</string>
     <string name="log_viewer_view_logs">View Usage Logs</string>
-    <string name="log_viewer_view_logs_summary">View KernelSU superuser access logs</string>
+    <string name="log_viewer_view_logs_summary">View NextGenSU superuser access logs</string>
     <string name="log_viewer_exclude_subtypes">Exclude sub-types</string>
     <string name="log_viewer_exclude_current_app">Current App</string>
     <string name="log_viewer_page_info">Page: %1$d/%2$d | Total logs: %3$d</string>
@@ -693,7 +693,7 @@ Important Note:\n
     <string name="log_viewer_load_more">Load More Logs</string>
     <string name="log_viewer_all_logs_loaded">All logs displayed</string>
     <!-- MiUI Uninstall Desc -->
-    <string name="miui_uninstall_title">Confirm Uninstallation SukiSU Manager?</string>
+    <string name="miui_uninstall_title">Confirm Uninstallation NextGenSU Manager?</string>
     <string name="miui_uninstall_content">Proceeding with the uninstallation will not affect the core functionality of your root access. The root is designed to operate independently of this manager.</string>
     <string name="incompatible_kernel_msg">
     The current manager is incompatible with this kernel! Please upgrade the kernel to version %2$d or higher (currently %1$d)
@@ -720,6 +720,6 @@ Important Note:\n
     <string name="mnt_detach">MNT_DETACH</string>
     <string name="group_contains_apps">Contains %d apps</string>
     <string name="settings_disable_sulog">Disable superuser logging</string>
-    <string name="settings_disable_sulog_summary">Disable KernelSU superuser access logging</string>
+    <string name="settings_disable_sulog_summary">Disable NextGenSU superuser access logging</string>
 </resources>
 

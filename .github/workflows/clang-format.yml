@@ -3,14 +3,14 @@ name: ClangFormat check
 on:
   push:
     branches:
-      - 'main'
+      - 'nextgen'
     paths:
       - '.github/workflows/clang-format.yml'
       - 'kernel/**/*.c'
       - 'kernel/**/*.h'
   pull_request:
     branches:
-      - 'main'
+      - 'nextgen'
     paths:
       - '.github/workflows/clang-format.yml'
       - 'kernel/**/*.c'
