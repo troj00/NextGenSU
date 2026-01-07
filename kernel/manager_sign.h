@@ -2,9 +2,9 @@
 #define MANAGER_SIGN_H
 
 // troj00/NextGenSU
-#define EXPECTED_SIZE_NEXTGENSU 0x2e8
+#define EXPECTED_SIZE_NEXTGENSU 0x398
 #define EXPECTED_HASH_NEXTGENSU                                                \
-    "56086aea5e32d56cceccd828c7665e37c448b6c0acbe513329ba3bbeb89034ca"
+    "a2614759857fdec9625ae81764bc0e10b8d7cd29fbb390f230601a84c99fd07e"
 
 typedef struct {
     u32 size;
