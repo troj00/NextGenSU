@@ -192,7 +192,7 @@ static struct DynamicStructInfo *dynamic_struct_infos[] = {
  * return 0 if successful
  * return -1 if struct not defined
  */
-int sukisu_super_find_struct(const char *struct_name, size_t *out_size, int *out_members)
+int nextgen_super_find_struct(const char *struct_name, size_t *out_size, int *out_members)
 {
 	for (size_t i = 0; i < (sizeof(dynamic_struct_infos) / sizeof(dynamic_struct_infos[0])); i++) {
 		struct DynamicStructInfo *info = dynamic_struct_infos[i];
@@ -210,7 +210,7 @@ int sukisu_super_find_struct(const char *struct_name, size_t *out_size, int *out
 	
 	return -1;
 }
-EXPORT_SYMBOL(sukisu_super_find_struct);
+EXPORT_SYMBOL(nextgen_super_find_struct);
 
 /*
  * Dynamic access struct
@@ -218,7 +218,7 @@ EXPORT_SYMBOL(sukisu_super_find_struct);
  * return -1 if struct not defined
  * return -2 if member not defined
  */
-int sukisu_super_access(const char *struct_name, const char *member_name, size_t *out_offset,
+int nextgen_super_access(const char *struct_name, const char *member_name, size_t *out_offset,
 				size_t *out_size)
 {
 	for (size_t i = 0; i < (sizeof(dynamic_struct_infos) / sizeof(dynamic_struct_infos[0])); i++) {
@@ -243,7 +243,7 @@ int sukisu_super_access(const char *struct_name, const char *member_name, size_t
 	
 	return -1;
 }
-EXPORT_SYMBOL(sukisu_super_access);
+EXPORT_SYMBOL(nextgen_super_access);
 
 #define DYNAMIC_CONTAINER_OF(offset, member_ptr) ({ \
 	(offset != (size_t)-1) ? (void*)((char*)(member_ptr) - offset) : NULL; \
@@ -255,7 +255,7 @@ EXPORT_SYMBOL(sukisu_super_access);
  * return -1 if current struct not defined
  * return -2 if target member not defined
  */
-int sukisu_super_container_of(const char *struct_name, const char *member_name, void *ptr,
+int nextgen_super_container_of(const char *struct_name, const char *member_name, void *ptr,
 				void **out_ptr)
 {
 	if (ptr == NULL)
@@ -279,4 +279,4 @@ int sukisu_super_container_of(const char *struct_name, const char *member_name, 
 	
 	return -1;
 }
-EXPORT_SYMBOL(sukisu_super_container_of);
+EXPORT_SYMBOL(nextgen_super_container_of);

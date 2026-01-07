@@ -30,11 +30,11 @@ struct cred* ksu_cred;
 #include "sucompat.h"
 #include "setuid_hook.h"
 
-void sukisu_custom_config_init(void)
+void nextgen_custom_config_init(void)
 {
 }
 
-void sukisu_custom_config_exit(void)
+void nextgen_custom_config_exit(void)
 {
 	ksu_uid_exit();
 	ksu_throne_comm_exit();
@@ -70,7 +70,7 @@ int __init kernelsu_init(void)
 
 	ksu_supercalls_init();
 
-	sukisu_custom_config_init();
+	nextgen_custom_config_init();
 #if !defined(CONFIG_KSU_SUSFS) && !defined(CONFIG_KSU_MANUAL_HOOK)
 	ksu_syscall_hook_manager_init();
 #endif
@@ -113,7 +113,7 @@ void kernelsu_exit(void)
 	ksu_sucompat_exit();
 	ksu_setuid_hook_exit();
 
-	sukisu_custom_config_exit();
+	nextgen_custom_config_exit();
 
 	ksu_supercalls_exit();
 	

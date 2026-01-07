@@ -29,32 +29,32 @@
 #include "../allowlist.h"
 #include "../manager.h"
 
-static int sukisu_is_su_allow_uid(uid_t uid)
+static int nextgen_is_su_allow_uid(uid_t uid)
 {
 	return ksu_is_allow_uid_for_current(uid) ? 1 : 0;
 }
 
-static int sukisu_get_ap_mod_exclude(uid_t uid)
+static int nextgen_get_ap_mod_exclude(uid_t uid)
 {
 	return 0; /* Not supported */
 }
 
-static int sukisu_is_uid_should_umount(uid_t uid)
+static int nextgen_is_uid_should_umount(uid_t uid)
 {
 	return ksu_uid_should_umount(uid) ? 1 : 0;
 }
 
-static int sukisu_is_current_uid_manager(void)
+static int nextgen_is_current_uid_manager(void)
 {
 	return is_manager();
 }
 
-static uid_t sukisu_get_manager_uid(void)
+static uid_t nextgen_get_manager_uid(void)
 {
 	return ksu_manager_uid;
 }
 
-static void sukisu_set_manager_uid(uid_t uid, int force)
+static void nextgen_set_manager_uid(uid_t uid, int force)
 {
 	if (force || ksu_manager_uid == -1)
 		ksu_manager_uid = uid;
@@ -65,21 +65,21 @@ struct CompactAddressSymbol {
 	void *addr;
 };
 
-unsigned long sukisu_compact_find_symbol(const char *name);
+unsigned long nextgen_compact_find_symbol(const char *name);
 
 static struct CompactAddressSymbol address_symbol[] = {
 	{ "kallsyms_lookup_name", &kallsyms_lookup_name },
-	{ "compact_find_symbol", &sukisu_compact_find_symbol },
-	{ "is_run_in_sukisu_ultra", (void *)1 },
-	{ "is_su_allow_uid", &sukisu_is_su_allow_uid },
-	{ "get_ap_mod_exclude", &sukisu_get_ap_mod_exclude },
-	{ "is_uid_should_umount", &sukisu_is_uid_should_umount },
-	{ "is_current_uid_manager", &sukisu_is_current_uid_manager },
-	{ "get_manager_uid", &sukisu_get_manager_uid },
-	{ "sukisu_set_manager_uid", &sukisu_set_manager_uid }
+	{ "compact_find_symbol", &nextgen_compact_find_symbol },
+	{ "is_run_in_nextgen_ultra", (void *)1 },
+	{ "is_su_allow_uid", &nextgen_is_su_allow_uid },
+	{ "get_ap_mod_exclude", &nextgen_get_ap_mod_exclude },
+	{ "is_uid_should_umount", &nextgen_is_uid_should_umount },
+	{ "is_current_uid_manager", &nextgen_is_current_uid_manager },
+	{ "get_manager_uid", &nextgen_get_manager_uid },
+	{ "nextgen_set_manager_uid", &nextgen_set_manager_uid }
 };
 
-unsigned long sukisu_compact_find_symbol(const char* name)
+unsigned long nextgen_compact_find_symbol(const char* name)
 {
 	int i;
 	unsigned long addr;
@@ -97,4 +97,4 @@ unsigned long sukisu_compact_find_symbol(const char* name)
 
 	return 0;
 }
-EXPORT_SYMBOL(sukisu_compact_find_symbol);
+EXPORT_SYMBOL(nextgen_compact_find_symbol);
